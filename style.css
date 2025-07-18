@@ -1,0 +1,165 @@
+:root {
+    --primary-bg: #1a1a2e;
+    --secondary-bg: #16213e;
+    --header-bg: #0f3460;
+    --accent-color: #e94560;
+    --text-color: #e0e0e0;
+    --gold-color: #ffc107;
+}
+
+body {
+    font-family: 'Teko', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.card {
+    background: var(--secondary-bg);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.header {
+    background-color: var(--header-bg);
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    color: var(--gold-color);
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group h2 {
+    font-size: 2em;
+    color: var(--accent-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--header-bg);
+    padding-bottom: 10px;
+}
+
+select, input, button {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.4em;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--header-bg);
+    background-color: #1f4068;
+    color: var(--text-color);
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c7304a;
+}
+
+#reset-button {
+    background-color: var(--gold-color);
+    color: var(--primary-bg);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    padding: 15px;
+    font-size: 1.6em;
+    border-bottom: 1px solid var(--header-bg);
+}
+
+th {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #1f4068;
+}
+
+.rank {
+    font-weight: 700;
+    color: var(--gold-color);
+    font-size: 1.8em;
+}
+
+.team-name {
+    text-align: left;
+    font-weight: 600;
+}
+
+.total-points {
+    font-weight: 700;
+    color: #50c878;
+    font-size: 1.8em;
+}
+
+.navigation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navigation a {
+    color: var(--gold-color);
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: var(--accent-color);
+}
+
+.match-history-item {
+    background-color: #1f4068;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--header-bg);
+}
+
+.match-history-item div {
+    margin-bottom: 5px;
+}
+
+#match-history-section table {
+    width: 100%;
+    margin-top: 20px;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="login-container">
+            <div class="card">
+                <div class="header"><h1>Admin Login</h1></div>
+                <div class="card-body">
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="password-input">Password:</label>
+                            <input type="password" id="password-input" required>
+                        </div>
+                        <button type="submit">Login</button>
+                        <p id="login-error" style="color: red; display: none;">Incorrect password. Please try again.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="dashboard-content" style="display: none;">
+            <div class="card">
+                <div class="header"><h1>Admin Dashboard</h1></div>
+                <div class="card-body">
+                    <div id="clearable-dashboard-content">
+                        <div class="form-group">
+                            <h2>Update Points</h2>
+                            <form id="update-form">
+                                <select id="team-select" required></select>
+                                <input type="number" id="kills-input" placeholder="Kills" min="0" required>
+                                <input type="number" id="placement-input" placeholder="Placement Points" min="0" required>
+                                <input type="date" id="match-date-input" required>
+                                <button type="submit">Update</button>
+                            </form>
+                        </div>
+                        <div class="form-group">
+                            <h2>Manage Teams</h2>
+                            <form id="create-team-form">
+                                <input type="text" id="new-team-name" placeholder="New Team Name" required>
+                                <button type="submit">Create Team</button>
+                            </form>
+                        </div>
+                        <div class="form-group">
+                            <form id="delete-team-form">
+                                <select id="delete-team-select" required></select>
+                                <button type="submit">Delete Team</button>
+                            </form>
+                        </div>
+                        <div class="form-group">
+                            <h2>Time Schedule</h2>
+                            <form id="time-schedule-form">
+                                <label for="schedule-date">Date:</label>
+                                <input type="date" id="schedule-date" required>
+                                <label for="schedule-time">Time:</label>
+                                <input type="time" id="schedule-time" required>
+                                <button type="submit">Set Schedule</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h2>Tournament Control</h2>
+                        <button id="reset-button">Reset All Data</button>
+                        <button id="view-scoreboard-button" type="button">View Scoreboard</button>
+                        <button id="save-match-history-button" type="button" style="margin-top: 10px; background-color: var(--gold-color); color: var(--primary-bg);">Save Match History</button>
+                    </div>
+                    <div class="form-group">
+                        <h2>Delete Match History</h2>
+                        <form id="delete-match-history-form">
+                            <input type="date" id="delete-match-date" required>
+                            <button type="submit" style="background-color: #dc3545;">Delete Match History</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <a href="index.html">Go to Scoreboard</a>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
